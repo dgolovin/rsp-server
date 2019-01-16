@@ -51,10 +51,10 @@ public class RemoteEventManager implements IDiscoveryPathListener, IVMInstallCha
 		}
 	}
 
-	public void serverAdded(ServerHandle server2) {
+	public void serverAdded(ServerHandle server2, ServerState state) {
 		List<RSPClient> l = server.getClients();
 		for( RSPClient c : l) {
-			c.serverAdded(server2);
+			c.serverAdded(state);
 		}
 	}
 	

@@ -317,12 +317,12 @@ public class ServerModel implements IServerModel {
 	protected void addServer(IServer server, IServerDelegate del) {
 		servers.put(server.getId(), server);
 		serverDelegates.put(server.getId(), del);
-		fireServerAdded(server);
+		fireServerAdded(server, del.getServerState());
 	}
 
-	private void fireServerAdded(IServer server) {
+	private void fireServerAdded(IServer server, ServerState state) {
 		for( IServerModelListener l : listeners ) {
-			l.serverAdded(toHandle(server));
+			l.serverAdded(toHandle(server), state);
 		}
 	}
 

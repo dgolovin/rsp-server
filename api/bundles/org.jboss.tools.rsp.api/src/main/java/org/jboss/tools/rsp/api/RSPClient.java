@@ -63,7 +63,7 @@ public interface RSPClient {
 	 * to this entrypoint.
 	 */
 	@JsonNotification
-	void serverAdded(ServerHandle server);
+	void serverAdded(ServerState state);
 
 	/**
 	 * The `client/serverRemoved` notification is sent by the server to all clients

@@ -14,7 +14,7 @@ import org.jboss.tools.rsp.api.dao.ServerState;
 public class ServerModelListenerAdapter implements IServerModelListener {
 
 	@Override
-	public void serverAdded(ServerHandle server) {
+	public void serverAdded(ServerHandle server, ServerState state) {
 	}
 
 	@Override

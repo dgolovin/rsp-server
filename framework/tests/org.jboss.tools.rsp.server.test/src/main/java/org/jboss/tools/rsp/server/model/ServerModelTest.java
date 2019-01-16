@@ -33,6 +33,7 @@ import org.jboss.tools.rsp.api.dao.Attribute;
 import org.jboss.tools.rsp.api.dao.Attributes;
 import org.jboss.tools.rsp.api.dao.CreateServerResponse;
 import org.jboss.tools.rsp.api.dao.ServerHandle;
+import org.jboss.tools.rsp.api.dao.ServerState;
 import org.jboss.tools.rsp.api.dao.ServerType;
 import org.jboss.tools.rsp.eclipse.core.runtime.Status;
 import org.jboss.tools.rsp.server.spi.model.IServerManagementModel;
@@ -247,7 +248,7 @@ public class ServerModelTest {
 		final Boolean[] removed = new Boolean[] {new Boolean(false)};
 		ServerModelListenerAdapter smla = new ServerModelListenerAdapter() {
 			@Override
-			public void serverAdded(ServerHandle server) {
+			public void serverAdded(ServerHandle server, ServerState state) {
 				added[0] = Boolean.TRUE;
 			}
 			@Override

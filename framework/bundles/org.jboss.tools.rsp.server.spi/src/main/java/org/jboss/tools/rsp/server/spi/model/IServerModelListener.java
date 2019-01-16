@@ -12,7 +12,7 @@ import org.jboss.tools.rsp.api.dao.ServerHandle;
 import org.jboss.tools.rsp.api.dao.ServerState;
 
 public interface IServerModelListener {
-	void serverAdded(ServerHandle server);
+	void serverAdded(ServerHandle server, ServerState state);
 	
 	void serverRemoved(ServerHandle server);
 	

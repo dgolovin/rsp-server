@@ -47,8 +47,8 @@ public class ClientImpl implements RSPClient {
 	}
 	
 	@Override
-	public void serverAdded(ServerHandle server) {
-		System.out.println("Server added: " + server.getType() + ":" + server.getId());
+	public void serverAdded(ServerState server) {
+		System.out.println("Server added: " + server.getServer().getType() + ":" + server.getServer().getId());
 	}
 
 	@Override
